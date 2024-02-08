@@ -1,0 +1,1103 @@
+@charset "UTF-8";
+
+/* 投稿ページ共通
+-------------------------------------------------------------- */
+
+dl.tag_list{
+	width:1126px;
+	margin: 0 auto;
+	display: flex;
+}
+dl.tag_list dt{
+	font-size: 1.6rem;
+}
+dl.tag_list dd li{
+	display: inline-block;
+	margin: 0 10px 10px 0;
+}
+dl.tag_list dd li a,
+dl.tag_list dd li.current{
+	display: inline-block;
+	height: 20px;
+	color: #0057AA;
+	font-size: 1.3rem;
+	line-height: 20px;
+	border: 1px solid #0057AA;
+	padding: 0 10px;
+	text-align: center;
+}
+dl#issue.tag_list{
+	padding-top: 30px;
+}
+
+@media only screen and ( max-width : 767px ) {
+	dl.tag_list{
+		width: 100%;
+	}
+	#post_idx dl.tag_list{
+		width:calc(100% - 40px);
+		display: block;
+	}
+	#post_idx dl.tag_list dd ul{
+		padding: 0 0 0 5px;
+		text-align: center;
+	}
+	#post_idx dl.tag_list dd li{
+		margin: 0 5px 10px 0;
+	}
+}
+
+
+/* post_idx 一覧ページ 共通
+category.php / tag.php / archive.php / taxonomy.php
+-------------------------------------------------------------- */
+
+#post_idx h1{
+	width: 100%;
+	height: 300px;
+	background: url("/images/newsroom/h1_bg01.jpg") center top no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#post_idx h1.technology{
+	background-image: url("/images/technology/h1_bg01.jpg");
+}
+#post_idx h1.case{
+	background-image: url("/images/technology/case_h1_bg01.jpg");
+}
+#post_idx h1.voice{
+	background-image: url("/images/technology/voice_h1_bg01.jpg");
+}
+#post_idx h1.issue{
+	background-image: url("/images/future/issue_h1_bg01.jpg");
+}
+#post_idx h1.document{
+	background-image: url("/images/future/future_h1_bg01.jpg");
+}
+#post_idx h1 span{
+	color: #fff;
+	font-size: 4.0rem;
+	font-family: 'Noto Serif JP', serif;
+}
+#post_idx .bread_nav{
+	margin: 20px auto 30px;
+}
+
+@media only screen and ( max-width : 767px ) {
+	#post_idx h1{
+		height: 285px;
+	}
+	#post_idx h1 span{
+		font-size: 3.0rem;
+		text-align: center;
+	}
+}
+
+/*=== 投稿記事一覧ページ用
+category.php / tag.php / taxonomy.php ===*/
+
+#post_idx #category_list{
+	width:1126px;
+	padding: 40px 20px 0;
+	margin: 0 auto 50px;
+	background: #f2f6fb;
+	display: flex;
+	justify-content: center;
+}
+#post_idx #category_list li{
+	display: inline-block;
+	padding: 0 15px 20px;
+}
+#post_idx #category_list li a{
+	display: block;
+	padding: 0 0 10px;
+	border-bottom: 1px solid transparent;
+}
+#post_idx #category_list li a:hover{
+	color: #0057AA;
+	border-bottom-color: #0057AA;
+	opacity: 1;
+}
+#post_idx #category_list li.current-cat a{
+	color: #0057AA;
+	border-bottom-color: #0057AA;
+}
+#post_idx .tag_list{
+	margin: 0 auto 80px;
+	justify-content: center;
+}
+#post_idx .tag_list dt{
+	width:180px;
+	text-align: center;
+}
+#post_idx .content_box{
+	width: 1126px;
+	margin: 0 auto;
+}
+#post_idx .content_box .item{
+	width:342px;
+	margin: 0 0 50px 50px;
+	float: left;
+	position: relative;
+}
+#post_idx .content_box .item a:hover{
+	display: block;
+	opacity: 0.5;
+}
+#post_idx .content_box .item:nth-of-type(3n+1){
+	clear: left;
+	float: left;
+	margin-left: 0;
+}
+#post_idx .content_box .item .pic{
+	text-align: center;
+	overflow: hidden;
+}
+#post_idx .content_box .item .pic img{
+	width: 342px;
+	height: 192px;
+	object-fit: cover;
+	font-family: 'object-fit: cover;'/*IE対策*/
+}
+#post_idx .content_box .item .label{
+	background: #0057AA;
+	color: #fff;
+	font-size: 1.4rem;
+	padding: 5px 10px;
+	position: absolute;
+	top:0;
+	left:0;
+}
+#post_idx .content_box .item .txt{
+	background: #fff;
+	padding: 10px 20px;
+	margin: -10px 0 0 20px;
+	position: relative;
+	z-index: 5;
+}
+#post_idx .content_box .item .txt .date{
+	color: #555;
+	margin: 0 0 10px;
+}
+#post_idx .content_box .item .txt h2{
+	font-family: 'Noto Serif JP', serif;
+	font-size: 1.8rem;
+	line-height: 1.35;
+	margin: 0 0 20px;
+}
+#post_idx .content_box .item .txt h2 span{
+	display: inline-block;
+	background: url("/images/common/arrow_01.png") right bottom 5px no-repeat;
+	background-size: 8px 13px;
+	padding: 0 15px 0 0;
+}
+#post_idx .content_box .item .txt ul{
+	text-align: left;
+}
+#post_idx .content_box .item .txt ul li{
+	display: inline-block;
+	height: 20px;
+	color: #0057AA;
+	font-size: 1.3rem;
+	line-height: 20px;
+	border:1px solid #0057AA;
+	padding: 0 10px;
+	text-align: center;
+	margin: 0 10px 10px 0;
+}
+
+@media only screen and ( max-width : 767px ) {
+	#post_idx #category_list{
+		width:100%;
+		padding: 20px 10px 0;
+		margin: 0 auto 30px;
+		display: block;
+		text-align: center;
+	}
+	#post_idx #category_list li{
+		padding: 0 10px 10px;
+		font-size: 1.4rem;
+	}
+	#post_idx .tag_list{
+		margin: 0 auto 30px;
+	}
+	#post_idx .tag_list dt{
+		width:100%;
+		font-size: 1.4rem;
+		margin: 0 0 20px;
+	}
+	#post_idx .content_box{
+		width: 100%;
+		padding: 20px 0 20px;
+	}
+	#post_idx .content_box .item{
+		margin: 0 auto 30px;
+		float: none;
+	}
+	#post_idx .content_box .item:nth-of-type(3n+1){
+		float: none;
+		margin: 0 auto 30px;
+	}
+}
+
+/*=== 一覧ページ専用デザイン
+医療技術 archive-technology.php
+医療技術･IVDの例 taxonomy-technology_tax-medicalequipment.php
+医療技術･IVDとは taxonomy-technology_tax-example.php
+活動･提言 archive-future.php
+===*/
+
+.category_box,
+.medicalequipment_category_box{
+	width: 1126px;
+	margin: 0 auto;
+	padding: 30px 0 50px;
+}
+.category_box .item{
+	width: 342px;
+	margin: 0 0 50px 50px;
+	float: left;
+	position: relative;
+}
+.medicalequipment_category_box .item{
+	width: 244px;
+	margin: 0 0 50px 50px;
+	float: left;
+	position: relative;
+}
+.category_box .item a:hover,
+.medicalequipment_category_box .item a:hover{
+	display: block;
+	opacity: 0.5;
+}
+.category_box .item:nth-of-type(3n+1){
+	clear: left;
+	float: left;
+	margin-left: 0;
+}
+.medicalequipment_category_box .item:nth-of-type(4n+1){
+	clear: left;
+	float: left;
+	margin-left: 0;
+}
+.category_box .item p{
+	margin: 10px 0 0;
+}
+.medicalequipment_category_box p{
+	margin: 10px 0 0;
+	text-align: center;
+}
+.category_box .item p span,
+.medicalequipment_category_box .item p span{
+	display: inline-block;
+	padding: 0 20px 0 0;
+	background: url("/images/common/arrow_01.png") top right no-repeat;
+	background-size: contain;
+}
+
+@media only screen and ( max-width : 767px ) {
+	.category_box,
+	.medicalequipment_category_box{
+		width: 100%;
+		margin: 0 auto;
+		padding: 50px 0 20px;
+	}
+	.category_box .item,
+	.medicalequipment_category_box .item{
+		margin: 0 auto 30px;
+		float: none;
+	}
+	.category_box .item:nth-of-type(3n+1){
+		float: none;
+		margin: 0 auto 30px;
+	}
+	.medicalequipment_category_box .item:nth-of-type(4n+1){
+		float: none;
+		margin: 0 auto 30px;
+	}
+}
+
+#medicalequipment h1,
+#example h1{
+	width: 100%;
+	height: 160px;
+	background: #FAFAFA;
+	color: #0057AA;
+	font-family: 'Noto Serif JP', serif;
+	font-size: 3.2rem;
+	font-weight: 600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#medicalequipment .bread_nav,
+#example .bread_nav{
+	margin: 20px auto 50px;
+}
+#medicalequipment h2{
+	width: 1126px;
+	font-family: 'Noto Serif JP', serif;
+	font-size: 2.4rem;
+	font-weight: 600;
+	border-bottom: 1px solid #9D9D9D;
+	padding: 0 0 10px;
+	margin: 0 auto 10px;
+}
+
+@media only screen and ( max-width : 767px ) {
+	#medicalequipment h1,
+	#example h1{
+		font-size: 2.6rem;
+	}
+	#medicalequipment .bread_nav,
+	#example .bread_nav{
+		display: none;
+	}
+	#medicalequipment h2{
+		width: calc(100% - 40px);
+		font-size: 2.2rem;
+		margin: 0 auto;
+	}
+}
+
+#medicalequipment .btn a,
+#example .btn a {
+	display: block;
+	width: 400px;
+	height: 50px;
+	background: #0057AA url("/images/common/arrow_02.png") center right 10px no-repeat;
+	background-size: 7px 11px;
+	color: #fff;
+	line-height: 50px;
+	text-align: center;
+	margin: 0 auto 80px;
+}
+
+@media only screen and ( max-width : 767px ) {
+	#medicalequipment h2{
+		margin-top: 50px;
+	}
+	#medicalequipment .category_box{
+		padding-bottom: 20px;
+	}
+	#medicalequipment .btn a,
+	#example .btn a{
+		width: calc(100% - 40px);
+		margin-bottom: 40px;
+	}
+}
+
+
+#example .content{
+	width: 940px;
+	margin: 0 auto;
+	padding: 30px 0;
+}
+#example h2{
+	color: #0057AA;
+	font-family: 'Noto Serif JP', serif;
+	font-size: 2.2rem;
+	font-weight: 600;
+	margin: 0 0 30px;
+}
+#example p{
+	line-height: 2;
+	margin: 0 0 50px;
+}
+
+@media only screen and ( max-width : 767px ) {
+	#example .content{
+		width: calc(100% - 40px);
+		padding: 50px 0 20px;
+	}
+	#example h2{
+		font-size: 2.0rem;
+		margin: 0 0 20px;
+	}
+	#example p{
+		margin: 0 0 30px;
+	}
+}
+
+/*=== エッセー集　content-essay.php　===*/
+
+#essay{
+	width:1126px;
+	margin: 0 auto;
+}
+#essay .bread_nav{
+	margin: 20px 0 50px;
+}
+#essay h1{
+	height: auto;
+	background-image: none;
+	color: #0057AA;
+	font-family: 'Noto Serif JP', serif;
+	font-size: 2.6rem;
+	font-weight: 600;
+	text-align: center;
+	margin: 0 0 50px;
+}
+#essay h2{
+	font-family: 'Noto Serif JP', serif;
+	font-size: 2.4rem;
+	font-weight: 600;
+	border-bottom: 1px solid #9D9D9D;
+	padding: 0 0 10px;
+	margin: 0 0 30px;
+}
+#essay p{
+	line-height: 2;
+}
+#essay .box{
+	padding: 50px 0;
+	display: flex;
+	justify-content: space-between;
+}
+#essay .box .book{
+	width:320px;
+}
+#essay .box .book .btn{
+	margin: 20px 0 0;
+}
+#essay .box .book .btn a{
+	display: block;
+	width: 320px;
+	height: 50px;
+	background: #0057AA url("/images/common/arrow_02.png") center right 10px no-repeat;
+	background-size: 7px 11px;
+	color: #fff;
+	line-height: 50px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+@media only screen and ( max-width : 767px ) {
+	#essay{
+		width:calc(100% - 40px);
+		padding: 30px 0 0;
+	}
+	#essay h1{
+		font-size: 2.4rem;
+		line-height: 1.25;
+		text-align: left;
+		margin: 0 0 30px;
+	}
+	#essay h2{
+		font-size: 2.2rem;
+		line-height: 1.25;
+		margin: 0 0 20px;
+	}
+	#essay .box{
+		padding: 30px 0 0;
+		display: block;
+	}
+	#essay .box .book{
+		margin: 0 auto 40px;
+	}
+	#essay .box .book .btn{
+		margin: 15px 0 0;
+	}
+}
+
+
+/*=== エッセー集/ケーススタディ・コラム/医療技術・IDVを巡る声　taxonomy-tecnology_tax.php　===*/
+
+#post_idx .essay_list li:nth-of-type(1) a,
+#post_idx .vol1_list li:nth-of-type(2) a,
+#post_idx .vol2_list li:nth-of-type(3) a,
+#post_idx .vol3_list li:nth-of-type(4) a{
+	color: #0057AA;
+	border-bottom-color: #0057AA !important;
+}
+#post_idx .document_list li:nth-of-type(1) a,
+#post_idx .casestudy_list li:nth-of-type(2) a,
+#post_idx .column_list li:nth-of-type(3) a,
+#post_idx .innovation_list li:nth-of-type(4) a{
+	color: #0057AA;
+	border-bottom-color: #0057AA !important;
+}
+#post_idx .voice_list li:nth-of-type(1) a,
+#post_idx .patient_group_list li:nth-of-type(2) a,
+#post_idx .medical_group_list li:nth-of-type(3) a,
+#post_idx .press_list li:nth-of-type(4) a{
+	color: #0057AA;
+	border-bottom-color: #0057AA !important;
+}
+
+/*=== 活動・提言　taxonomy-future_tax.php　===*/
+
+#post_idx .document_list li:nth-of-type(1) a,
+#post_idx .statement_list li:nth-of-type(2) a,
+#post_idx .request_list li:nth-of-type(3) a,
+#post_idx .opinion_list li:nth-of-type(4) a,
+#post_idx .other_list li:nth-of-type(5) a{
+	color: #0057AA;
+	border-bottom-color: #0057AA;
+}
+
+
+/* 個別ページ（共通）
+-------------------------------------------------------------- */
+
+article.single > section{
+	width: 100%;
+}
+article.single > section:nth-of-type(even){
+	background: #F8F8F8;
+	padding: 50px 0;
+	margin: 0;
+}
+article.single > section .inner{
+	width:1126px;
+	margin: 0 auto;
+}
+article.single .bread_nav{
+	margin: 20px auto;
+}
+article.single .cat{
+	height: 26px;
+	margin: 0 0 20px;
+}
+article.single .cat a{
+	height: 26px;
+	background: #0057aa;
+	color: #fff;
+	font-size: 1.2rem;
+	line-height: 26px;
+	text-align: center;
+	padding: 0 10px;
+}
+article.single h1{
+	font-family: 'Noto Serif JP', serif;
+	font-size: 3.0rem;
+	font-weight: 600;
+	line-height: 1.25;
+	margin: 0 0 20px;
+}
+article.single h1.medicalequipment,
+article.single h1.vol1,
+article.single h1.vol2,
+article.single h1.vol3{
+	margin: 0 0 50px;
+}
+article.single .date{
+	margin: 0 0 50px;
+}
+article.single .tag_list{
+	margin: 0 auto 40px;
+}
+article.single .tag_list dt{
+	padding: 0 30px 0 0;
+}
+article.single .foot_btn{
+	margin: 50px 0;
+	text-align: center;
+}
+article.single .foot_btn a{
+	display: inline-block;
+	height: 50px;
+	background: #0057AA;
+	color: #fff;
+	font-size: 1.5rem;
+	line-height: 50px;
+	text-align: center;
+	position: relative;
+	padding: 0 30px 0 20px;
+	margin: 0 auto;
+}
+article.single .foot_btn a::after{
+	content: '';
+	width: 7px;
+	height: 11px;
+	background: url("/images/common/arrow_02.png") center top no-repeat;
+	background-size: contain;
+	position: absolute;
+	top:19px;
+	right: 10px;
+}
+
+@media only screen and ( max-width : 767px ) {
+	article.single > section .inner{
+		width:calc(100% - 40px);
+	}
+	article.single h1{
+		font-size: 2.6rem;
+	}
+	article.single .date{
+		margin: 0 0 30px;
+	}
+	article.single .tag_list{
+		margin: 0 auto 30px;
+	}
+	article.single .foot_btn a{
+		width: calc(100% - 40px);
+	}
+}
+
+
+/* single_01 個別ページ（デフォルト1カラム用）
+-------------------------------------------------------------- */
+
+#single_01 .area{
+	margin: 0 0 50px;
+}
+#single_01 .col1_loop{
+	margin: 30px 0 0;
+}
+#single_01 img{
+	max-width: 100%;
+	height: auto;
+}
+
+@media only screen and ( max-width : 767px ) {
+	#single_01{
+		padding: 30px 0 0;
+	}
+	#single_01 .area img{
+		width:100%;
+	}
+}
+
+/* single_02 個別ページ（デフォルト2カラム用）
+-------------------------------------------------------------- */
+
+#single_02 .area{
+	display: flex;
+	justify-content: space-between;
+	margin: 0 0 50px;
+}
+#single_02 .area .main{
+	width:734px;
+}
+#single_02 .area .main .add_editor{
+	padding: 30px 0 0;
+}
+#single_02 .area .main .add_editor2{
+	padding: 0 0 30px;
+}
+#single_02 .area .main .add_editor2:nth-last-of-type(1){
+	padding: 0;
+}
+#single_02 .area .main img{
+	max-width: 100%;
+	height: auto;
+}
+#single_02 .area .side{
+	width: 342px;
+}
+#single_02 .area .side figure{
+	padding: 0 0 30px;
+}
+#single_02 .area .side figure:nth-last-of-type(1){
+	padding: 0;
+}
+#single_02 .area .side figure img{
+	width:100%;
+}
+#single_02 .area .side figcaption{
+	padding: 10px 0 0;
+	line-height: 1.2;
+}
+
+@media only screen and ( max-width : 767px ) {
+	#single_02{
+		padding: 30px 0 0;
+	}
+	#single_02 .area{
+		display: block;
+		margin: 0;
+	}
+	#single_02 .area .main{
+		width:100%;
+		margin: 0 0 30px;
+	}
+	#single_02 .area .main .add_editor2:nth-last-of-type(1){
+		padding: 0 0 30px;
+	}
+	#single_02 .area .main img{
+		width:100%;
+	}
+	#single_02 .area .side{
+		width: 100%;
+		margin: 0 0 30px;
+	}
+}
+
+
+/* 個別ページ　コンテンツ部スタイル
+-------------------------------------------------------------- */
+
+.single .area h2,
+.single .area h3,
+.single .area h4,
+.single .area h5,
+.single .area h6{
+	font-family: 'Noto Serif JP', serif;
+	font-weight: 600;
+	line-height: 1.25;
+}
+.single .area h2{
+	font-size: 2.6rem !important;
+	margin: 0 0 20px;
+}
+.single .area h3{
+	color: #0057AA;
+	font-size: 2.4rem;
+	margin: 0 0 20px;
+}
+.single .area h4{
+	color: #0057AA;
+	font-size: 2.2rem;
+	margin: 0 0 20px;
+}
+.single .area h5,
+.single .area h6{
+	color: #0057AA;
+	font-size: 2.0rem;
+	margin: 0 0 20px;
+}
+.single .area a{
+	text-decoration: underline;
+}
+.single .area p{
+	line-height: 2;
+	margin: 0 0 20px;
+}
+.single .area ul{
+	padding: 0 0 10px;
+}
+.single .area ul li{
+	list-style-type: disc;
+	margin: 0 0 10px 15px;
+	line-height: 1.2;
+}
+.single .area ol{
+	padding: 0 0 10px;
+}
+.single .area ol li{
+	list-style-type: decimal;
+	margin: 0 0 10px 15px;
+	line-height: 1.2;
+}
+.single .area table{
+	border-collapse: collapse;
+	border: 1px solid #CECECE;
+	margin: 20px 0 0;
+}
+.single .area table th{
+	border: 1px solid #CECECE;
+	background: #f2f5fa;
+	padding: 10px;
+	line-height: 1.5;
+	vertical-align: middle;
+}
+.single .area table td{
+	border: 1px solid #CECECE;
+	padding: 10px;
+	line-height: 1.5;
+}
+.single .area img.alignleft{
+	display: block;
+	margin-right: auto;
+}
+.single .area img.aligncenter{
+	display: block;
+	margin: 0 auto;
+}
+.single .area img.alignright{
+	display: block;
+	margin-left: auto;
+}
+
+@media only screen and ( max-width : 767px ) {
+	.single .area h2{
+		font-size: 2.4rem !important;
+	}
+	.single .area h3{
+		font-size: 2.2rem;
+	}
+	.single .area h4{
+		font-size: 2.0rem;
+	}
+	.single .area h5,
+	.single .area h6{
+		font-size: 1.8rem;
+	}
+}
+
+
+/* 個別ページ　課題への取組み
+-------------------------------------------------------------- */
+
+.single .area .lead{
+	line-height: 2;
+	margin: 0 0 30px;
+}
+.single .area .memo{
+	min-height: 63px;
+	background: url("/images/future/icon_memo.png") top left no-repeat;
+	background-size: contain;
+	padding: 0 0 0 50px;
+	display: flex;
+	align-items: center;
+	margin: 0 0 30px;
+}
+.single .area .memo li{
+	list-style: none;
+	padding: 0 0 0 40px;
+}
+.single .area .memo li a{
+	color: #0057AA;
+	text-decoration: underline;
+}
+#lean_overlay{
+  position: fixed;
+	z-index:100; 
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  display: none;
+}
+#modal{
+  width: 940px;
+	display: none;
+ }
+#modal .wrap{
+	width: 100%;
+	max-height: calc(100vh - 300px);
+	background: #fff;
+	padding: 60px 100px;
+	overflow-y: scroll;
+}
+#modal dl{
+	width: 100%;
+	margin: 30px 0 0;
+}
+#modal dl:nth-of-type(1){
+	margin: 0;
+}
+#modal dt{
+	text-align: center;
+	padding: 0 0 30px;
+}
+#modal dt span{
+	display: inline-block;
+	background: url("/images/future/icon_memo.png") top left no-repeat;
+	background-size: contain;
+	padding: 0 0 0 70px;
+	color: #0057AA;
+	font-size: 2.0rem;
+	line-height: 63px;
+	font-weight: 400;
+}
+#modal dd{
+	line-height: 2;
+}
+.btn_close{ 
+  position: absolute;
+  top: -80px;
+  right: 10px;
+  display: block; 
+  width: 48px;
+  height: 67px; 
+  background:url(/images/future/btn_close.png);
+	background-size: contain;
+  z-index: 110;
+	cursor: pointer;
+}
+.single .area .point{
+	background: #f2f5fa;
+	border-radius: 20px;
+	padding: 35px;
+	margin: 0 0 100px;
+}
+.single .area .point h2{
+	background: url("/images/future/point_h2_bg.png") center bottom no-repeat;
+	padding: 0 0 20px;
+	color: #0057AA;
+	font-family: 'Noto Serif JP', serif;
+	font-size: 3.2rem !important;
+	font-weight: 600;
+	letter-spacing: 2px;
+	text-align: center;
+	margin: 0 0 30px;
+}
+.single .area .point li{
+	height: 100px;
+	list-style: none;
+	background-color: #0057AA;
+	background-position: left 25px center;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+	padding: 0 20px 0 135px;
+	color: #fff;
+	font-size: 1.8rem;
+	line-height: 1.5;
+	display: flex;
+	align-items: center;
+	margin: 0 0 15px;
+}
+.single .area .point li:nth-of-type(1){
+	background-image: url("/images/future/point_01.png");
+}
+.single .area .point li:nth-of-type(2){
+	background-image: url("/images/future/point_02.png");
+}
+.single .area .point li:nth-of-type(3){
+	background-image: url("/images/future/point_03.png");
+}
+.single .area .point li:nth-of-type(4){
+	background-image: url("/images/future/point_04.png");
+}
+.single .area .point li:nth-of-type(5){
+	background-image: url("/images/future/point_05.png");
+}
+.single .area .point li:nth-last-of-type(1){
+	margin: 0;
+}
+
+@media only screen and ( max-width : 767px ) {
+	.single .area .memo{
+		width: 100%;
+		background-size: 45px auto;
+		display: block;
+		margin: 0 0 20px;
+	}
+	.single .area .memo li{
+		list-style: none;
+		padding: 0 0 10px;
+	}
+	#modal{
+		width:calc(100% - 20px);
+		padding: 20px;
+	}
+	#modal .wrap{
+		max-height: calc(100vh - 200px);
+		background: #fff;
+		padding: 20px;
+	}
+	#modal dt{
+		padding: 0 0 15px;
+	}
+	#modal dt span{
+		background-position: top center;
+		background-size: 45px auto;
+		padding: 75px 0 0;
+		font-size: 1.6rem;
+		line-height: 1.2;
+		text-align: center;
+	}
+	.btn_close{ 
+		top: -70px;
+	}
+	.single .area .point{
+		padding: 20px;
+		margin: 0 0 30px;
+	}
+	.single .area .point h2{
+		font-size: 2.6rem !important;
+	}
+	.single .area .point li{
+		height: auto;
+		min-height: 70px;
+		background-position: left 10px top 10px;
+		background-size: 50px 50px;
+		padding: 10px 10px 10px 70px;
+		font-size: 1.4rem;
+	}
+}
+
+
+/* 関連団体 / PDFダウンロード / Fileダウンロード　(common.css 762 追記)
+-------------------------------------------------------------- */
+
+#relation,
+#pdf_dl,
+#file_dl {
+	margin: 50px 0;
+}
+
+/* デバイスラグ
+-------------------------------------------------------------- */
+.scroll-table {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.single .area table.devicerug{
+	margin: 0 0 10px 0;
+}
+.single .area table.devicerug span{
+	font-size: 12px;
+}
+.single .area table.devicerug th{
+	border: 1px solid #CECECE;
+	background: #fff;
+	padding: 10px;
+	line-height: 1.5;
+	vertical-align: middle;
+	text-align: center;
+}
+.single .area table.devicerug td{
+	border: 1px solid #CECECE;
+	padding: 10px;
+	line-height: 1.5;
+	vertical-align: middle;
+	text-align: center;
+}
+.single .area table.devicerug td.bgyellow,
+.single .area table.devicerug th.bgyellow{
+	background: #fffe87;
+}
+.devicerug-note {
+	font-size: 12px;
+	padding-left: 4em;
+	text-indent:-4em;
+}
+.devicerug-note span{
+	display: inline-block;
+	text-indent:0;
+	width: 4em;
+}
+/* imageにhoverで文字出力
+-------------------------------------------------------------- */
+.imghover {
+	overflow: hidden;
+	margin: 0 auto;
+	position: relative;	/* 相対位置指定 */
+}
+.imghover .caption {
+	text-align: center;
+	color: #fff;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.imghover a.caption:hover{
+	opacity:1.0;
+}
+.imghover  a.caption span {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100%;
+}
+.imghover .mask {
+	width: 100%;
+	height: 100%;
+	position: absolute;	/* 絶対位置指定 */
+	top: 0;
+	left: 0;
+	opacity: 0;	/* マスクを表示しない */
+	background-color: rgba(0,0,0,0.4);	/* マスクは半透明 */
+	-webkit-transition:	all 0.2s ease;
+	transition: all 0.2s ease;
+}
+.imghover:hover .mask {
+	opacity: 1;	/* マスクを表示する */
+}
